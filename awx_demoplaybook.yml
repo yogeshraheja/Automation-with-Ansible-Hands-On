@@ -4,5 +4,5 @@
   connection: local
 
   tasks:
-  - name: Checking hostname
-    ansible.builtin.command: uptime
+  - name: Ping Test
+    ansible.builtin.ping:
