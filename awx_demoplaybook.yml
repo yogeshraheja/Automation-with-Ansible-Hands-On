@@ -6,3 +6,8 @@
   tasks:
   - name: Ping Test
     ansible.builtin.ping:
+    register: pingoutput
+
+  - name: Debug results
+    ansible.builtin.debug:
+      var: pingoutput
