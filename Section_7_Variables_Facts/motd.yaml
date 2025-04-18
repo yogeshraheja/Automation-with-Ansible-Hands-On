@@ -1,6 +1,6 @@
 ---
 - name: MOTD file
-  hosts: "managed-node01, localhost"
+  hosts: "all"
   become: yes
 
   tasks:
