@@ -1,16 +1,8 @@
 ---
-- name: MOTD file
+- name: Running playbook via awx
   hosts: "localhost"
-#  become: yes
   connection: local
 
   tasks:
-  - name: Creating MOTD file
-    ansible.builtin.copy:
-      dest: /etc/motd
-      content: |
-        Welcome to Thinknyx Technologies Server!
-
-        This server is managed by Ansible.
-
-        Last Login time {{ ansible_date_time['date'] }} {{ ansible_date_time['time'] }}
+  - name: Checking hostname
+    ansible.builtin.command: hostname
